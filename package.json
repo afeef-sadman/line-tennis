@@ -1,0 +1,18 @@
+{
+  "name": "line-tennis",
+  "version": "1.0.0",
+  "description": "Minimalist multiplayer line tennis — draw-your-racket arcade game with real WebSocket rooms and a bot opponent.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/sim-test.js && node test/net-test.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

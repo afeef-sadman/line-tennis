@@ -1,0 +1,15 @@
+# Render Blueprint — deploy Line Tennis with one click.
+# After pushing this repo to GitHub: render.com/deploy/blueprints
+# → connect the repo → Render reads this file and provisions the service.
+services:
+  - type: web
+    name: line-tennis
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # LT_DEBUG stays unset (test-only hook disabled in production).
